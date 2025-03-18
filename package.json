@@ -10,7 +10,6 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@prisma/nuxt": "^0.3.0",
     "@tailwindcss/vite": "^4.0.13",
     "nuxt": "^3.16.0",
     "nuxt-music-flow": "^1.1.4",
