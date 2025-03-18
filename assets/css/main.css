@@ -1,0 +1,14 @@
+    @import "tailwindcss";
+
+    /* Sembunyikan scrollbar tanpa menonaktifkan scroll */
+/* Sembunyikan scrollbar tanpa menonaktifkan scroll */
+html, body {
+  overflow: auto;
+  -ms-overflow-style: none; /* Untuk Internet Explorer dan Edge */
+  scrollbar-width: none; /* Untuk Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Untuk Chrome, Safari, dan Edge */
+}
