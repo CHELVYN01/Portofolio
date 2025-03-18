@@ -10,5 +10,5 @@ export default defineNuxtConfig({
       tailwindcss()
     ]
   },
-   modules: ["@prisma/nuxt", "nuxt-music-flow", "@nuxt/icon"],
+   modules: ["nuxt-music-flow", "@nuxt/icon"],
 })
