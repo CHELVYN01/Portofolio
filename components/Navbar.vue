@@ -28,7 +28,7 @@ onMounted(() => {
         const height = section.offsetHeight;
 
         if (top >= offset && top < offset + height) {
-          link.classList.add("text-green-400" );
+          link.classList.add("text-green-400");
         } else {
           link.classList.remove("text-green-400");
         }
@@ -42,7 +42,8 @@ onMounted(() => {
   <!-- Navbar -->
   <nav class="bg-[#000A03] fixed w-full top-0 z-10 py-4 px-6 flex justify-between items-center text-white shadow-md">
     <!-- Logo -->
-    <NuxtLink to="#hero" @click.prevent="smoothScroll('#hero')" class="text-2xl font-bold text-green-400">ChelvynKleden</NuxtLink>
+    <NuxtLink to="#hero" @click.prevent="smoothScroll('#hero')" class="text-2xl font-bold text-green-400">ChelvynKleden
+    </NuxtLink>
 
     <!-- Desktop Menu -->
     <ul class="hidden md:flex space-x-6">
@@ -53,7 +54,10 @@ onMounted(() => {
 
     <!-- Kontak -->
     <div class="hidden md:flex space-x-4 items-center">
-      <NuxtLink to="#contact" class="bg-green-600 text-black px-4 py-2 rounded-lg hover:bg-green-500">Contact</NuxtLink>
+      <a href="https://wa.me/6285803480139" target="_blank" rel="noopener"
+        class="bg-green-600 text-black px-4 py-2 rounded-lg hover:bg-green-500">
+        Contact
+      </a>
     </div>
 
     <!-- Mobile Menu Button -->
@@ -70,12 +74,12 @@ onMounted(() => {
         <li><a href="#skills" @click.prevent="smoothScroll('#skills')" class="nav-link">Skills</a></li>
         <li><a href="#career" @click.prevent="smoothScroll('#career')" class="nav-link">Career</a></li>
         <li class="border-t border-gray-700 pt-4">
-          <NuxtLink to="#contact" class="bg-green-600 text-black px-4 py-2 rounded-lg block text-center">Contact</NuxtLink>
+          <NuxtLink to="#contact" class="bg-green-600 text-black px-4 py-2 rounded-lg block text-center">Contact
+          </NuxtLink>
         </li>
       </ul>
     </div>
   </nav>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

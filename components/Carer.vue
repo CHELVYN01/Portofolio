@@ -5,15 +5,10 @@
 
     <div class="relative mt-10 max-w-5xl mx-auto overflow-hidden">
       <!-- Career Timeline -->
-      <div 
-        class="flex transition-transform duration-500 ease-in-out"
-        :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
-      >
-        <div 
-          v-for="(career, index) in careerTimeline" 
-          :key="index" 
-          class="min-w-full flex flex-col items-center text-center px-8"
-        >
+      <div class="flex transition-transform duration-500 ease-in-out"
+        :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
+        <div v-for="(career, index) in careerTimeline" :key="index"
+          class="min-w-full flex flex-col items-center text-center px-8">
           <div class="p-8 bg-[#0A1B2F] rounded-2xl shadow-lg border border-green-500 w-3/4">
             <span class="text-green-300 text-sm font-medium">{{ career.year }}</span>
             <h3 class="text-2xl font-semibold mt-2 text-green-400">{{ career.title }}</h3>
@@ -22,23 +17,19 @@
               <a :href="career.link" target="_blank" class="text-green-300 hover:text-green-500">
                 🔗 Go to Link
               </a>
-             
+
             </div>
           </div>
         </div>
       </div>
 
       <!-- Navigation Buttons -->
-      <button 
-        @click="prevSlide"
-        class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full text-green-400 hover:bg-opacity-70"
-      >
+      <button @click="prevSlide"
+        class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full text-green-400 hover:bg-opacity-70">
         ❮
       </button>
-      <button 
-        @click="nextSlide"
-        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full text-green-400 hover:bg-opacity-70"
-      >
+      <button @click="nextSlide"
+        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full text-green-400 hover:bg-opacity-70">
         ❯
       </button>
     </div>
@@ -52,6 +43,12 @@ const currentIndex = ref(0);
 let interval = null;
 
 const careerTimeline = [
+  {
+    year: "2025 - Present",
+    title: "Junior Technical Consultant (Odoo Developer) - PT. Sinergi Karya Solusindo",
+    description: "Worked on customizing and developing Odoo modules, automating workflows, and integrating Odoo with business processes. Contributed to building efficient ERP solutions using Python and PostgreSQL.",
+    link: "https://www.sinerka.com", // bisa diganti dengan link resmi perusahaan
+  },
   {
     year: "2023",
     title: "Web Development Intern - Harian Jogja Group",
@@ -88,7 +85,7 @@ const prevSlide = () => {
 // };
 
 onMounted(() => {
- nextSlide()
+  nextSlide()
 });
 
 onUnmounted(() => {
@@ -102,6 +99,7 @@ onUnmounted(() => {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
