@@ -1,16 +1,21 @@
 <template>
-  <section id="skills" class="py-16 px-6 bg-[#000A03] text-white">
-    <h2 class="text-4xl font-bold text-center text-[#5FF573] mb-6">MY SKILLS</h2>
+  <section id="skills" class="py-20 px-6 bg-[#F5F1E8] text-[#1B2845] border-t-2 border-[#D4C5B0]">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-[#1B2845] mb-4">My Skills</h2>
+      <div class="w-24 h-1 bg-[#C9A961] mx-auto mb-4"></div>
+      <p class="text-[#4A4A4A] text-lg">Technologies and tools I work with</p>
+    </div>
 
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-6 max-w-4xl mx-auto">
-      <div 
-        v-for="(skill, index) in skills" 
-        :key="index" 
-        class="group flex flex-col items-center justify-center p-5 bg-[#0A1B2F] rounded-lg shadow-md transition-all duration-300 hover:bg-[#123456] hover:scale-105 hover:shadow-lg cursor-pointer animate-fade-in"
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-12 max-w-5xl mx-auto">
+      <div
+        v-for="(skill, index) in skills"
+        :key="index"
+        class="group flex flex-col items-center justify-center p-6 bg-[#FAF8F3] border-2 border-[#D4C5B0] shadow-sm transition-all duration-300 hover:border-[#C9A961] hover:-translate-y-1 hover:shadow-md cursor-pointer animate-fade-in"
         :style="{ animationDelay: `${index * 0.1}s` }"
       >
-        <Icon :name="skill.icon" class="text-3xl text-[#5FF573] group-hover:text-white transition-all" />
-        <span class="mt-2 text-sm font-semibold text-[#BFFFC2] group-hover:text-white transition-all">{{ skill.name }}</span>
+        <Icon :name="skill.icon" class="text-4xl transition-all group-hover:scale-110" />
+        <span class="mt-3 text-sm font-semibold text-[#1B2845] transition-all">{{ skill.name }}</span>
       </div>
     </div>
   </section>
