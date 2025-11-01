@@ -1,6 +1,51 @@
-    @import "tailwindcss";
+@import "tailwindcss";
 
-    /* Sembunyikan scrollbar tanpa menonaktifkan scroll */
+/* Import Classic Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&display=swap');
+
+/* Classic Color Palette CSS Variables */
+:root {
+  /* Background Colors */
+  --classic-cream: #F5F1E8;
+  --classic-light-cream: #FAF8F3;
+  --classic-dark-cream: #E8E2D5;
+
+  /* Primary Colors */
+  --classic-navy: #1B2845;
+  --classic-deep-navy: #0F1626;
+  --classic-light-navy: #2C3E5F;
+
+  /* Accent Colors */
+  --classic-gold: #C9A961;
+  --classic-dark-gold: #A68948;
+  --classic-light-gold: #D4BC7A;
+
+  --classic-burgundy: #7A3B3B;
+  --classic-brown: #5D4E37;
+  --classic-light-brown: #8B7355;
+
+  /* Text Colors */
+  --classic-text-dark: #2B2B2B;
+  --classic-text-medium: #4A4A4A;
+  --classic-text-light: #6B6B6B;
+
+  /* Border & Shadow */
+  --classic-border: #D4C5B0;
+  --classic-shadow: rgba(27, 40, 69, 0.15);
+}
+
+/* Classic Typography */
+body {
+  font-family: 'Lora', 'Georgia', serif;
+  background-color: var(--classic-cream);
+  color: var(--classic-text-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  color: var(--classic-navy);
+}
+
 /* Sembunyikan scrollbar tanpa menonaktifkan scroll */
 html, body {
   overflow: auto;
@@ -11,4 +56,15 @@ html, body {
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none; /* Untuk Chrome, Safari, dan Edge */
+}
+
+/* Classic Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Classic Selection */
+::selection {
+  background-color: var(--classic-gold);
+  color: var(--classic-navy);
 }

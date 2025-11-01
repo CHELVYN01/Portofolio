@@ -28,9 +28,9 @@ onMounted(() => {
         const height = section.offsetHeight;
 
         if (top >= offset && top < offset + height) {
-          link.classList.add("text-green-400");
+          link.classList.add("text-[#C9A961]");
         } else {
-          link.classList.remove("text-green-400");
+          link.classList.remove("text-[#C9A961]");
         }
       }
     });
@@ -40,41 +40,43 @@ onMounted(() => {
 
 <template>
   <!-- Navbar -->
-  <nav class="bg-[#000A03] fixed w-full top-0 z-10 py-4 px-6 flex justify-between items-center text-white shadow-md">
+  <nav class="bg-[#FAF8F3] fixed w-full top-0 z-10 py-5 px-8 flex justify-between items-center text-[#1B2845] shadow-lg border-b-2 border-[#D4C5B0]">
     <!-- Logo -->
-    <NuxtLink to="#hero" @click.prevent="smoothScroll('#hero')" class="text-2xl font-bold text-green-400">ChelvynKleden
+    <NuxtLink to="#hero" @click.prevent="smoothScroll('#hero')" class="text-3xl font-bold text-[#1B2845] tracking-wide">
+      Chelvyn Kleden
     </NuxtLink>
 
     <!-- Desktop Menu -->
-    <ul class="hidden md:flex space-x-6">
-      <li><a href="#projects" @click.prevent="smoothScroll('#projects')" class="nav-link">Projects</a></li>
-      <li><a href="#skills" @click.prevent="smoothScroll('#skills')" class="nav-link">Skills</a></li>
-      <li><a href="#career" @click.prevent="smoothScroll('#career')" class="nav-link">Career</a></li>
+    <ul class="hidden md:flex space-x-8 text-lg">
+      <li><a href="#projects" @click.prevent="smoothScroll('#projects')" class="nav-link hover:text-[#C9A961] transition-all duration-300 font-medium">Projects</a></li>
+      <li><a href="#skills" @click.prevent="smoothScroll('#skills')" class="nav-link hover:text-[#C9A961] transition-all duration-300 font-medium">Skills</a></li>
+      <li><a href="#career" @click.prevent="smoothScroll('#career')" class="nav-link hover:text-[#C9A961] transition-all duration-300 font-medium">Career</a></li>
     </ul>
 
     <!-- Kontak -->
     <div class="hidden md:flex space-x-4 items-center">
       <a href="https://wa.me/6285803480139" target="_blank" rel="noopener"
-        class="bg-green-600 text-black px-4 py-2 rounded-lg hover:bg-green-500">
+        class="bg-[#1B2845] text-[#FAF8F3] px-6 py-2 border-2 border-[#1B2845] hover:bg-[#C9A961] hover:border-[#C9A961] hover:text-[#1B2845] transition-all duration-300 font-semibold">
         Contact
       </a>
     </div>
 
     <!-- Mobile Menu Button -->
     <button class="md:hidden focus:outline-none" @click="isOpen = !isOpen">
-      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-6 h-6 text-[#1B2845]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
     </button>
 
     <!-- Mobile Menu -->
-    <div v-if="isOpen" class="absolute top-16 left-0 w-full bg-[#18230F] md:hidden">
-      <ul class="flex flex-col space-y-4 p-4 text-white">
-        <li><a href="#projects" @click.prevent="smoothScroll('#projects')" class="nav-link">Projects</a></li>
-        <li><a href="#skills" @click.prevent="smoothScroll('#skills')" class="nav-link">Skills</a></li>
-        <li><a href="#career" @click.prevent="smoothScroll('#career')" class="nav-link">Career</a></li>
-        <li class="border-t border-gray-700 pt-4">
-          <NuxtLink to="#contact" class="bg-green-600 text-black px-4 py-2 rounded-lg block text-center">Contact
+    <div v-if="isOpen" class="absolute top-[72px] left-0 w-full bg-[#FAF8F3] md:hidden border-b-2 border-[#D4C5B0] shadow-lg">
+      <ul class="flex flex-col space-y-4 p-6 text-[#1B2845]">
+        <li><a href="#projects" @click.prevent="smoothScroll('#projects')" class="nav-link hover:text-[#C9A961] transition-colors duration-300 font-medium">Projects</a></li>
+        <li><a href="#skills" @click.prevent="smoothScroll('#skills')" class="nav-link hover:text-[#C9A961] transition-colors duration-300 font-medium">Skills</a></li>
+        <li><a href="#career" @click.prevent="smoothScroll('#career')" class="nav-link hover:text-[#C9A961] transition-colors duration-300 font-medium">Career</a></li>
+        <li class="border-t-2 border-[#D4C5B0] pt-4">
+          <NuxtLink to="#contact" class="bg-[#1B2845] text-[#FAF8F3] px-6 py-2 border-2 border-[#1B2845] hover:bg-[#C9A961] hover:border-[#C9A961] hover:text-[#1B2845] transition-all duration-300 font-semibold block text-center">
+            Contact
           </NuxtLink>
         </li>
       </ul>

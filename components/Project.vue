@@ -1,24 +1,36 @@
 <template>
   <!-- Projects Section -->
-  <section id="projects" class="py-16 px-6 bg-gradient-to-b from-black via-[#000301] to-[#000A03] text-white">
-    <h2 class="text-4xl font-bold text-center text-green-400">My Projects</h2>
-    <p class="text-center text-gray-300 mt-2">Check out some of my recent work</p>
+  <section id="projects" class="py-20 px-6 bg-[#FAF8F3] text-[#1B2845] border-t-2 border-[#D4C5B0]">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-[#1B2845] mb-4">My Projects</h2>
+      <div class="w-24 h-1 bg-[#C9A961] mx-auto mb-4"></div>
+      <p class="text-[#4A4A4A] text-lg">Check out some of my recent work</p>
+    </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 max-w-5xl mx-auto">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto">
       <div v-for="(project, index) in projects" :key="index"
-        class="p-6 bg-[#0A1B2F] rounded-xl shadow-lg text-center transition duration-300 hover:shadow-2xl hover:scale-105">
-        <h3 class="text-2xl font-semibold text-green-300">{{ project.name }}</h3>
-        <p class="mt-2 text-gray-400 text-sm">{{ project.description }}</p>
+        class="p-8 bg-[#F5F1E8] border-2 border-[#D4C5B0] shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:border-[#C9A961]">
 
-        <div class="flex justify-center gap-4 mt-6 items-center">
+        <!-- Decorative Top Border -->
+        <div class="w-16 h-1 bg-[#C9A961] mx-auto mb-6"></div>
+
+        <h3 class="text-2xl font-bold text-[#1B2845] mb-3">{{ project.name }}</h3>
+        <p class="mt-3 text-[#4A4A4A] text-base leading-relaxed">{{ project.description }}</p>
+
+        <div class="flex justify-center gap-6 mt-8 items-center">
           <!-- Tampilkan ikon Live Preview hanya jika liveLink tersedia -->
-          <a v-if="project.liveLink" :href="project.liveLink" target="_blank">
-            <Icon name="uil:external-link-alt" size="30px" style="color: white" />
+          <a v-if="project.liveLink" :href="project.liveLink" target="_blank"
+             class="transition-all duration-300 hover:scale-110"
+             title="Live Preview">
+            <Icon name="uil:external-link-alt" size="32px" style="color: #1B2845" class="hover:opacity-70" />
           </a>
 
           <!-- Ikon GitHub selalu ditampilkan -->
-          <a :href="project.githubLink" target="_blank" class="text-gray-300 hover:text-gray-500">
-            <Icon name="uil:github" size="32px" style="color: white" />
+          <a :href="project.githubLink" target="_blank"
+             class="transition-all duration-300 hover:scale-110"
+             title="View on GitHub">
+            <Icon name="uil:github" size="32px" style="color: #1B2845" class="hover:opacity-70" />
           </a>
         </div>
       </div>
